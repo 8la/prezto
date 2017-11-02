@@ -11,3 +11,28 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+alias xterm="xterm -bg black -fg white"
+
+# VirtualenvWrapper
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+
+keychain ~/.ssh/alorenzo_ull_rsa ~/.ssh/stic_sis_dsa ~/.ssh/id_rsa  ~/.ssh/alorenzo
+alias veewee="bundle exec veewee"
+
+source ~/.keychain/$HOST-sh
+
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+### Use ruby from chefdk embedded
+#export PATH="/opt/chefdk/embedded/bin:$PATH"
+#ChefDK installed gems
+export PATH="/home/alorenzo/.chefdk/gem/ruby/2.3.0/bin:$PATH"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/git/chef-repo/bin" # Scripts stic para chef
+export PATH="$PATH:$HOME/gocode/bin" # Go scripts
+
+export GOPATH=/home/alorenzo/gocode
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+alias k="kitchen"
